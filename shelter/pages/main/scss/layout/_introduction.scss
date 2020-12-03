@@ -1,0 +1,88 @@
+.introduction {
+    padding-top: 11.3rem;
+    background: url(../../../assets/images/gray-gradient.png),radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+
+    @media (max-width: $desktop-width) {
+        padding-top: .1rem;
+    }
+
+    
+    @media (max-width: $tablet-width) {
+        padding-top: 0;
+    }
+
+    &__wrap {
+        @include flex();
+
+        @media (max-width: $desktop-width) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        @include flex-column();
+        align-items: flex-start;
+        width: 42%;
+        padding-top: 10.2rem;
+
+        @media (max-width: $desktop-width) {
+            align-items: center;
+            width: 65%;
+            padding-top: 9.45rem;
+        }
+
+        @media (max-width: $tablet-width) {
+            width: 97%;
+            padding-top: 9.4rem;
+        }
+    }
+
+    &__heading {
+        max-width: 70%;
+        margin-bottom: 2.5rem;
+        font: 2.75rem/130% $font-georgia;
+        color: $color-white;
+
+        @media (max-width: $desktop-width) {
+            align-self: flex-start;
+        }
+
+        @media (max-width: $tablet-width) {
+            max-width: 100%;
+            font-size: 1.6rem;
+            letter-spacing: 0.08rem;
+            text-align: center;
+        }
+    }
+
+    &__desc {
+        max-width: 93%;
+        margin-bottom: 2.6rem;
+        color: $color-light-gray;
+
+        @media (max-width: $desktop-width) {
+            max-width: 100%;
+        }
+        
+        @media (max-width: $tablet-width) {
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        @include button();
+        min-width: 207px;
+    }
+
+    &__picture {
+     
+        @media (max-width: $desktop-width) {
+            padding: 6.18rem 0 0 8.5rem;
+        }
+
+        @media (max-width: $tablet-width) {
+            padding: 6.6rem 0 0 2.5rem;
+        }
+    }
+}

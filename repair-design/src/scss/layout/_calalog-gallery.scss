@@ -1,0 +1,161 @@
+.catalog-wrapper {
+  margin-bottom: -120px;
+}
+
+.catalog {
+  @include flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 137px;
+
+  &__heading {
+    margin-bottom: 25px;
+    font: 22px/138% $font-yeseva-one;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-gold;
+  }
+
+  &__list {
+    display: none;
+
+    &-item {
+      width: -moz-fit-content;
+      width: fit-content;
+      font: 20px/34px $font-proxima-nova;
+      color: $color-white;
+      cursor: pointer;
+      transition: $base-transition;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      &_active,
+      &:hover {
+        color: $color-gold;
+        box-shadow: 0 1px 0 $color-gold;
+      }
+    }
+  }
+
+  // gallery
+  &__gallery {
+    display: none;
+
+    &-col {
+
+      &:first-child {
+        margin: 70px 43px 0 0;
+      }
+    }
+
+    &-img {
+
+      &:first-of-type {
+        margin-bottom: 39px;
+      }
+    }
+  }
+
+  //  slider
+  &__slider {
+    position: relative;
+    max-width: 340px;
+    max-height: 240px;
+  }
+
+  // arrows
+  &__arrows {
+    position: absolute;
+    top: calc((100% - 36px) / 2);
+    width: 100%;
+
+    &-prev,
+    &-next {
+      position: absolute;
+      @include flex;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      font: 700 10px "Font Awesome 5 Free";
+      background-color: $color-gold;
+      color: $color-white;
+      box-shadow: 0 0 15px rgba(227, 184, 115, 0.5);
+      border-radius: 50%;
+      transition: $base-transition;
+      cursor: pointer;
+
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $color-gold;
+      }
+    }
+
+    &-prev {
+      content: '\f060';
+      left: 14px;
+    }
+
+    &-next {
+      content: '\f061';
+      right: 14px;
+    }
+  }
+}
+
+// media queries
+@media (min-width: 600px) {
+  .catalog-wrapper {
+    background: url('images/bg-catalog-gallery.jpg') no-repeat;
+    background-size: cover;
+  }
+
+  .catalog {
+    //  slider
+    &__slider {
+      display: none;
+    }
+
+    // gallery
+    &__gallery {
+      @include flex;
+      align-items: flex-start;
+      padding: 0 3% 5%;
+    }
+  }
+
+}
+
+@media ($desktop-widths) {
+
+  .catalog {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 137px 2% 0;
+
+    &__heading {
+      margin-bottom: 47px;
+      font-size: 27px;
+      line-height: 37px;
+      text-align: left;
+    }
+
+    &__list {
+      display: block;
+    }
+
+    &__gallery {
+      margin: -250px 0 -30px;
+      padding: 0;
+    }
+  }
+
+}
+
+@media (min-width: 1550px) {
+  .catalog {
+    padding: 137px 0 0;
+  }
+
+}

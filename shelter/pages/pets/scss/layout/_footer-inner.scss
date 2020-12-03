@@ -1,0 +1,123 @@
+.footer {
+    padding-top: 2.55rem;
+    background: url(../../../assets/images/gray-gradient.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+
+    @media (max-width: $desktop-width) {
+        padding-top: .8rem;
+    }
+
+    &__wrap {
+        @include flex();
+
+        @media (max-width: $desktop-width) {
+            flex-direction: column;
+            padding: 0 3.9rem;
+        }
+
+        @media (max-width: $tablet-width) {
+            padding: 0 .6rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        padding-top: 1rem;
+
+        @media (max-width: $desktop-width) {
+            margin-bottom: 3.85rem;
+        }
+
+        @media (max-width: $tablet-width) {
+            flex-direction: column;
+            margin-bottom: 5.5rem;
+        }
+    }
+
+    &__contacts {
+        margin-right: 10rem;
+
+        @media (max-width: $desktop-width) {
+            margin-right: 4rem;
+        }
+
+        @media (max-width: $tablet-width) {
+            margin: 0 0 2.2rem 0;
+        }
+    }
+
+    &__contacts-title,
+    &__adress-title {
+        font: $font-full-georgia;
+        line-height: 125%;
+        letter-spacing: $base-spacing;
+        color: $color-white;
+
+        @media (max-width: $tablet-width) {
+            text-align: center;
+        }
+    }
+
+    &__contacts-title {
+        margin-bottom: 2.2rem;
+    }
+
+    &__contacts-list {
+
+        @media (max-width: $tablet-width) {
+            margin-left: .7rem;
+        }
+    }
+
+    &__contacts-item {
+
+        &:first-child {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__contacts-link,
+    &__adress-link {
+        display: inline-flex;
+        font: 1.33rem/115% $font-georgia;
+        font-family: Georgia;
+        letter-spacing: .04rem;
+        color: $color-gold;
+    }
+
+    &__contacts-link {
+        padding: .5rem 0 .5rem 3.7rem;
+
+        &_email {
+            background: url(../../../assets/images/icon-email.svg) 0 50% no-repeat;
+        }
+
+        &_phone {
+            background: url(../../../assets/images/icon-phone.svg) 0 50% no-repeat;
+        }
+    }
+
+    &__adress-title {
+        margin-bottom: 1.5rem;
+        letter-spacing: .065rem;
+    }
+
+    &__adress-item {
+
+        &:first-child {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &__adress-link {
+        padding: .5rem 0 .5rem 2.6rem;
+        background: url(../../../assets/images/icon-marker.svg) 0 50% no-repeat;
+    }
+
+    &__picture {
+
+        @media (max-width: $desktop-width) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

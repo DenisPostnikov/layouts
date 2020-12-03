@@ -1,0 +1,202 @@
+.banner-content {
+  position: relative;
+  display: flex;
+}
+
+// sidebar-instagram
+.sidebar-insta  {
+  display: none;
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:hover .sidebar-insta__title:after {
+      animation: rotation 2s infinite linear;
+    }
+  }
+
+  &__title {
+    font: 14px/16px $font-futura-demic;
+    text-transform: uppercase;
+    color: $color-gold;
+    transform: rotate(90deg);
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -17px;
+      left: 115px;
+      width: 1px;
+      height: 51px;
+      background-color: $color-gold;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+// banner
+.banner {
+  flex-grow: 1;
+  background: url('images/banner-bg.jpg') center no-repeat;
+  background-size: cover;
+
+  &__shadow {
+    padding: 85px 18px 60px 18px;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  &__header {
+    margin-bottom: 16px;
+    font: 22px/132% $font-yeseva-one;
+    text-transform: uppercase;
+    color: $color-white;
+
+    &-city {
+      color: $color-gold;
+    }
+  }
+
+  &__desc {
+    max-width: 85%;
+    margin-bottom: 32px;
+    font: 18px/135% $font-base;
+    color: $color-white;
+  }
+}
+
+// banner buttons
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .button_cost,
+  .button_application {
+    @include button;
+    width: 90%;
+  }
+
+  .button_cost {
+    margin-bottom: 25px;
+  }
+
+  .button_application {
+    background-color: transparent;
+    border: 1px solid $color-white;
+  }
+
+  .button {
+    justify-content: center;
+    padding: 18px 13px;
+    font: 13px/15px $font-futura-demic;
+    color: $color-white;
+  }
+}
+
+// scroll-down
+.scroll-down {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+  padding: 40px 95px 38px 50px;
+  font: 14px/19px $font-yeseva-one;
+  text-transform: uppercase;
+  background-color: $bg-dark;
+  color: $color-white;
+
+  &:hover {
+    &:after {
+      animation: bounce 0.6s infinite;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 35px;
+    right: 50px;
+    width: 29px;
+    height: 29px;
+    background: url('images/scroll-down-icon.svg') no-repeat;
+  }
+}
+
+// media queries
+@media (min-width: 440px) {
+  // banner buttons
+  .buttons {
+
+    .button_cost,
+    .button_application {
+      width: 50%;
+    }
+  }
+}
+
+@media ($tablet-widths) {
+  // sidebar-instagram
+  .sidebar-insta  {
+    display: flex;
+    justify-content: center;
+  }
+
+  // banner
+  .banner {
+
+    &__shadow {
+      padding: 194px 0 208px 60px;
+    }
+
+    &__header {
+      margin-bottom: 20px;
+      font-size: 40px;
+      line-height: 53px;
+    }
+
+    &__desc {
+      max-width: 65%;
+      margin-bottom: 40px;
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  // banner buttons
+  .buttons {
+    flex-direction: row;
+
+    .button_cost,
+    .button_application {
+      width: auto;
+    }
+
+    .button {
+      padding: 17px 42px;
+    }
+
+    .button_cost {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+  }
+
+  // scroll-down
+  .scroll-down {
+    display: block;
+  }
+
+}
+
+@media ($desktop-widths) {
+  // banner
+  .banner {
+
+    &__desc {
+      max-width: 32%;
+    }
+  }
+
+}

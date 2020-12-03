@@ -1,0 +1,150 @@
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: $mobile-widths-rate;
+  margin: 0 auto;
+  margin-bottom: 59px;
+  border: $border-line;
+}
+
+.video-container__text {
+  padding: 27px 35px 31px 32px;
+  font-size: 13px;
+}
+
+.video-container__title {
+  position: relative;
+  padding: 22px 34.5% 27px;
+  font: bold 17px $body-font-family;
+  color: $body-secondary-color;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 10.5%;
+    display: block;
+    width: 32px;
+    height: 32px;
+    fill: $bg-products-color;
+    background: url(../img/icon-video.svg) no-repeat 50% 50%;
+    background-size: 32px 32px;
+  }
+}
+
+.video-container__title--desktop {
+  display: none;
+}
+
+.video-container__description {
+  margin-bottom: 24px;
+}
+
+.video-container__content {
+  position: relative;
+  width: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 101px;
+    height: 77px;
+    cursor: pointer;
+    background: url(../img/icon-play.svg) no-repeat 50% 50%;
+    background-size: 101px 77px;
+    transition: .2s ease;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.video-container__content:hover::after {
+  top: 45%;
+  left: 45%;
+  transform: scale(1.2);
+}
+
+.video-container__content:active::after {
+  transform: scale(0.8);
+  opacity: 0.3;
+}
+
+.video-container__content img {
+  display: block;
+  width: 100%;
+}
+
+@media ($tablet-widths) {
+
+  .video-container {
+    width: $tablet-widths-rate;
+    margin-bottom: 64px;
+  }
+
+  .video-container__title {
+    width: auto;
+    padding: 38px 0 0 15.71%;
+    font-size: 20px;
+
+    &:before {
+      top: 35px;
+      left: 12%;
+    }
+  }
+
+  .video-container__text {
+    padding: 30px 40px 45px;
+    font-size: 15px;
+    line-height: 29px;
+  }
+
+  .video-container__content {
+    order: -1;
+  }
+
+  .video-container__description {
+    margin-bottom: 37px;
+  }
+}
+
+@media ($desktop-widths) {
+
+  .video-container {
+    width: $desctop-widths-rate;
+    margin-bottom: 103px;
+  }
+
+  .video-container__title {
+    display: none;
+
+    &:before {
+      top: 10px;
+      left: 1%;
+    }
+  }
+
+  .video-container__content {
+    width: 65%;
+  }
+
+  .video-container__content img {
+    width: 100%;
+  }
+
+  .video-container__title--desktop {
+    display: block;
+    padding: 60px 0 30px;
+  }
+
+  .video-container__text {
+    width: 350px;
+    padding: 28px 41px 45px 77px;
+  }
+
+  .video-container__description {
+    margin-bottom: 47px;
+    line-height: 30px;
+  }
+}

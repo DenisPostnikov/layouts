@@ -1,0 +1,102 @@
+.help {
+    padding: 5rem 2.5rem 6.2rem;
+
+    @media (max-width: $desktop-width) {
+        padding: 5rem 2.5rem 2.8rem;
+    }
+
+    @media (max-width: $tablet-width) {
+        padding: 2.6rem .6rem .8rem;
+    }
+
+    &__heading {
+        margin-bottom: 3.8rem;
+        font: $font-full-georgia;
+        line-height: 123%;
+        letter-spacing: $base-spacing;
+        text-align: center;
+        color: $color-dark-gray;
+
+        @media (max-width: $tablet-width) {
+            margin-bottom: 2.6rem;
+            font-size: 1.67rem;
+        }
+    }
+
+    &__list {
+        @include flex();
+        flex-wrap: wrap;
+        padding-left: 5.3rem;
+
+        @media (max-width: $desktop-width) {
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 3.8rem;
+            padding-left: 1.8rem;
+        }
+
+        @media (max-width: $tablet-width) {
+            column-gap: 1.8rem;
+            padding-left: .4rem;
+        }
+    }
+
+    &__item {
+        margin-right: 5.3rem;
+        @include flex-column();
+        justify-content: space-between;
+        align-items: center;
+        font: 1.33rem/115% $font-georgia;
+        letter-spacing: 0.04em;
+        color: $color-dark-gray;
+
+        &:nth-child(-n + 5) {
+            margin: 0 5.3rem 3.5rem 0;
+
+            @media (max-width: $desktop-width) {
+                margin: 0 0 3.5rem 0;
+            }
+
+            @media (max-width: $tablet-width) {
+                margin: 0 0 1.8rem 0;
+            }
+        }
+
+        &:nth-child(6) {
+            margin-left: 5.3rem;
+
+            @media (max-width: $desktop-width) {
+                margin-left: 0;
+            }
+        }
+
+        &:last-child {
+            margin-right: 10.5rem;
+
+            @media (max-width: $desktop-width) {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: $desktop-width) {
+            width: 170px;
+            margin: 0 0 3.5rem 0;
+        }
+
+        @media (max-width: $tablet-width) {
+            width: 130px;
+            margin: 0 0 1.8rem 0;
+            font-size: 1rem;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 1.8rem;
+
+        @media (max-width: $tablet-width) {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1.25rem;
+        }
+    }
+}

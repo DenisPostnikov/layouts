@@ -1,0 +1,160 @@
+.types-repair {
+  margin-bottom: 65px;
+  text-align: center;
+
+  &__heading {
+    margin-bottom: 17px;
+    font: 22px/138% $font-yeseva-one;
+    text-transform: uppercase;
+    color: #181818;
+  }
+
+  // icon
+  &__img {
+    position: relative;
+    display: inline-flex;
+    margin-bottom: 40px;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      width: 32px;
+      height: 1px;
+      background-color: $color-gold;
+    }
+
+    &:before {
+      left: 40px;
+    }
+
+    &:after {
+      right: 40px;
+    }
+  }
+
+  &__icon {
+    fill: $color-gold;
+  }
+}
+
+// cards
+.repair-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 0 18px;
+}
+
+.repair-card {
+  position: relative;
+  max-width: 340px;
+
+  &:not(:last-child) {
+    margin-bottom: 185px;
+  }
+
+  &__desc {
+    position: absolute;
+    bottom: -105px;
+    max-width: 270px;
+    width: 100%;
+    padding: 21px 41px 37px 31px;
+    text-align: left;
+    background-color: $bg-light;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font: 15px/138% $font-yeseva-one;
+    color: $body-text-color;
+  }
+
+  &__list {
+    margin-left: 12px;
+    background-color: $bg-light;
+  }
+
+  &__item {
+    list-style: disc;
+    font: 13px/170% $font-base;
+    color: #959595;
+  }
+
+  // button
+  &__button {
+    @include button;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    padding: 11px 19px;
+  }
+}
+
+// media queries
+@media ($desktop-widths) {
+  .types-repair {
+    margin-bottom: 140px;
+
+    &__heading {
+      margin-bottom: 13px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    // icon
+    &__img {
+      margin-bottom: 30px;
+    }
+  }
+
+  // cards
+  .repair-cards {
+    padding: 0 100px;
+  }
+
+  .repair-card {
+    max-width: 390px;
+
+    &__desc {
+      bottom: -105px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-width: 330px;
+      padding: 25px 32px 36px 31px;
+    }
+
+    &__title {
+      margin-bottom: 13px;
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    &__list {
+      margin-left: 14px;
+    }
+
+    &__item {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+
+}
+
+@media ($big-desktop-widths) {
+  .types-repair {
+    margin-bottom: 45px;
+  }
+
+  // cards
+  .repair-cards {
+    justify-content: space-between;
+    padding: 0;
+  }
+
+}

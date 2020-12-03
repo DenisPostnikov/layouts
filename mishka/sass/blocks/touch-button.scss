@@ -1,0 +1,67 @@
+.touch-button {
+  position: absolute;
+  top: 27px;
+  right: 8.8%;
+  z-index: 4;
+  display: block;
+  width: 25px;
+  height: 25px;
+  font-size: 0;
+  background-color: #fff;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.header__menu--closed .touch-button:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 11%;
+  width: 20px;
+  height: 2px;
+  background-color: #221f1f;
+  box-shadow: 0 6px 0 0 #221f1f,
+              0 12px 0 0 #221f1f;
+}
+
+.header__menu--opened .touch-button {
+  right: 9%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 11%;
+    width: 20px;
+    height: 2px;
+    background-color: #221f1f;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.header__menu--nojs .touch-button {
+  display: none;
+}
+
+@media ($tablet-widths) {
+
+  .touch-button {
+    display: none;
+  }
+}

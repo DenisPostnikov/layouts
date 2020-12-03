@@ -1,0 +1,35 @@
+.submit-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $mobile-widths-rate;
+  margin: 0 auto;
+}
+
+.submit-area__title {
+  display: block;
+  margin-bottom: 26px;
+  font-size: 14px;
+}
+
+@media ($tablet-widths) {
+  .submit-area {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .submit-area__title {
+    margin-bottom: 0;
+    padding-right: 6.5%;
+    font-size: 17px;
+  }
+}
+
+@media ($desktop-widths) {
+
+  .submit-area__title {
+    padding-right: 19.5%;
+  }
+}

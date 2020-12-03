@@ -1,0 +1,143 @@
+.header {
+  @include flex;
+  padding: 23px 18px;
+
+  // header-logo
+  &__logo {
+
+    &-link {
+      font: 12px/14px $font-futura-demic;
+      text-transform: uppercase;
+      color: $color-gold;
+      transition: $base-transition;
+
+      &:hover {
+        color: #ffb030;
+      }
+    }
+  }
+
+  // navigation
+  &__navigation {
+    display: none;
+
+    &-list {
+      @include flex;
+    }
+
+    &-link {
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: $color-white;
+
+      &_active,
+      &:hover {
+        color: $color-gold;
+      }
+    }
+  }
+
+  // header-contact
+  &__contact {
+
+    &-link {
+      font: 12px/14px $font-futura-demic;
+      color: $color-white;
+    }
+
+    &-button {
+      display: none;
+      border: none;
+    }
+  }
+}
+
+// media queries
+@media ($tablet-widths) {
+  .header {
+
+    // header-logo
+    &__logo {
+
+      &-link {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    // navigation
+    &__navigation {
+      display: block;
+      max-width: 50%;
+      width: 100%;
+
+      &-link {
+        font-size: 12px;
+        transition: all 0.1s linear;
+      }
+    }
+
+    // header-contact
+    &__contact {
+
+      &-link {
+        text-decoration: underline;
+        color: $color-gold;
+        transition: $base-transition;
+
+        &:hover {
+          color: #ffb030;
+        }
+      }
+    }
+  }
+}
+
+@media ($desktop-widths) {
+  .header {
+    padding: 21px 82px 20px 100px;
+
+    // navigation
+    &__navigation {
+      max-width: 40%;
+
+      &-link {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    // header-contact
+    &__contact {
+      @include flex;
+      max-width: 28%;
+      width: 100%;
+
+      &-link {
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      &-button {
+        @include button;
+        font: 13px/15px $font-futura-demic;
+      }
+    }
+  }
+
+}
+
+@media ($big-desktop-widths) {
+  .header {
+
+    // header-contact
+    &__contact {
+
+      &-button {
+        padding: 13px 33px;
+      }
+    }
+  }
+
+}

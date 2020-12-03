@@ -1,0 +1,47 @@
+@mixin container() {
+    max-width: $base-desktop-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+
+    @media (max-width: $desktop-width) {
+      max-width: $base-tablet-width;
+      padding: 0 1.9rem;
+    }
+
+    @media (max-width: $tablet-width) {
+      max-width: $base-mobile-width;
+      padding: 0 .6rem;
+    }
+  }
+  
+  @mixin flex() {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  @mixin button() {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 52px;
+      font: 1.06rem/130% $font-georgia;
+      letter-spacing: 0.06em;
+      color: $color-black;
+      background-color: $color-gold;
+      border: none;
+      border-radius: 6.67rem;
+      cursor: pointer;
+      transition: $base-transition;
+
+      &:hover {
+          background-color: $color-gold-light;
+          border-color: $color-gold-light;
+      }
+  }

@@ -1,0 +1,8 @@
+.idea
+*.sublime*
+.vscode
+
+*.log*
+node_modules/
+
+build/

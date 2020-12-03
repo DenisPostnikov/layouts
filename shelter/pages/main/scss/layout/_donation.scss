@@ -1,0 +1,124 @@
+.donation {
+    padding: 5.1rem 0 6.3rem;
+    background-color: #f6f6f6;
+
+    @media (max-width: $desktop-width) {
+        flex-direction: column;
+        padding: 4.9rem 0 6.3rem; 
+    }
+
+    @media (max-width: $tablet-width) {
+        padding: 2.7rem 0 2.55rem;
+    }
+    
+    &__wrap {
+        display: flex;
+
+        @media (max-width: $desktop-width) {
+            flex-direction: column;
+            align-items: center;
+            padding: 0 8.3rem;
+        }
+
+        @media (max-width: $tablet-width) {
+            padding: 0 .6rem;
+        }
+    }
+
+    &__picture {
+        width: 44.6%;
+        margin-left: 11.8%;
+        padding-top: .6rem;
+
+        @media (max-width: $desktop-width) {
+            order: 1;
+            width: 100%;
+            padding-top: 0;
+            margin-left: 0;
+        }
+
+        @media (max-width: $tablet-width) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__content {
+        width: 31.6%;
+
+        @media (max-width: $desktop-width) {
+            width: 76%;
+            margin-bottom: 3.8rem
+        }
+
+        @media (max-width: $tablet-width) {
+            width: 94%;
+            margin-bottom: 2.7rem;
+        }
+    }
+
+    &__heading {
+        max-width: 78%;
+        margin-bottom: 1.2rem;
+        font: $font-full-georgia;
+        line-height: 123%;
+        letter-spacing: $base-spacing;
+
+        @media (max-width: $tablet-width) {
+            max-width: 100%;
+            margin-bottom: 1.4rem;
+            font-size: 1.67rem;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1.25rem;
+        font: 1rem/110% $font-georgia;
+        letter-spacing: .03rem;
+        color: $color-dark-gray;
+
+        @media (max-width: $tablet-width) {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.55rem;
+            font-size: .94rem;
+            letter-spacing: 0;
+        }
+    }
+
+    &__card {
+        margin-bottom: 1.2rem;
+        display: inline-flex;
+        padding: .6rem 1rem .6rem 3.8rem;
+        font: 1.33rem/115% $font-georgia;
+        letter-spacing: .03rem;
+        background: $color-gold url(../../../assets/images/credit-card.svg) 4.6% 50% no-repeat;
+        color: $color-dark-gray;
+        border-radius: .6rem;
+        cursor: pointer;
+        transition: $base-transition;
+
+        &:hover {
+            background-color: #fddcc4;
+        }
+
+        @media (max-width: $tablet-width) {
+            padding: .8rem 1rem .8rem 3.6rem;
+            font-size: 1rem;
+            line-height: 110%;
+            background-position-x: 6%;
+        }
+    }
+
+    &__subtitle {
+        font-style: italic;
+        font-size: .75rem;
+        line-height: 1.15rem;
+        color: #b2b2b2;
+
+        @media (max-width: $tablet-width) {
+            text-align: justify;
+        }
+    }
+}

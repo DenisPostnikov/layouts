@@ -1,0 +1,257 @@
+.steps-wrapper {
+  display: none;
+  position: relative;
+  padding: 111px 0 245px;
+  background: url('images/bg-steps.png') no-repeat;
+}
+
+.left-side {
+  margin: 0 45px 0 355px;
+}
+
+// ellipse-icon
+.steps-ellipse {
+  position: absolute;
+  top: 50px;
+  left: 0;
+
+  &__icon {
+    width: 480px;
+    height: 637px;
+  }
+}
+
+// steps-list
+.steps-list {
+
+  &__item {
+    @include flex;
+    justify-content: flex-start;
+    font: 18px/21px $font-futura-medium;
+
+    &:first-child {
+      margin-bottom: 70px;
+    }
+
+    &:nth-child(2) {
+      margin: 0 0 120px 75px;
+    }
+
+    &:nth-child(3) {
+      margin: 0 0 120px 100px;
+    }
+
+    &:last-child {
+      margin-left: 33px;
+    }
+  }
+
+  &__count {
+    @include flex;
+    justify-content: center;
+    max-width: 42px;
+    width: 100%;
+    height: 42px;
+    margin-right: 20px;
+    font: 18px/25px $font-yeseva-one;
+    color: $color-white;
+    background-color: $color-gold;
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.15);
+    border-radius: 30px;
+  }
+}
+
+// right-side
+.right-side {
+  max-width: 500px;
+  width: 100%;
+}
+
+// steps-form
+.steps-form {
+  margin-bottom: 25px;
+  padding: 28px 49px;
+  background-color: $bg-dark;
+
+  &__title {
+    margin-bottom: 39px;
+    font: 20px/25px $font-futura-demic;
+    text-align: center;
+    color: $color-white;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(-n+2) {
+      margin-bottom: 39px;
+    }
+
+    label {
+      font-size: 15px;
+      line-height: 20px;
+      margin-bottom: 6px;
+      color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+    }
+
+    input {
+      width: 100%;
+      background-color: inherit;
+      color: #fff;
+
+      padding: 0 60px 10px 0;
+      border: none;
+      border-bottom: 1px solid rgb(54, 54, 54);
+      cursor: pointer;
+
+      &::-webkit-input-placeholder {
+        font: 18px/24px $font-base;
+        color: $color-white;
+        opacity: 1;
+      }
+
+      &:-ms-input-placeholder {
+        font: 18px/24px $font-base;
+        color: $color-white;
+        opacity: 1;
+      }
+
+      &::placeholder {
+        font: 18px/24px $font-base;
+        color: $color-white;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item_email {
+    margin-bottom: 16px;
+  }
+
+  &__item_checked {
+    margin-bottom: 39px;
+
+    input {
+      display: none;
+    }
+
+    label {
+      position: relative;
+      margin: 0;
+      padding-left: 30px;
+      font: 16px/22px $font-base;
+      color: $color-white;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        border: 1px solid $color-gold;
+        border-radius: 1px;
+      }
+    }
+  }
+
+  input:checked + label::after {
+    content: "\f00c";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font: 11px "Font Awesome 5 Free";
+    font-weight: 700;
+    color: $color-white;
+  }
+
+  input:checked + label::before {
+    background-color: $color-gold;
+  }
+
+  &__item_button {
+
+    button {
+      @include button;
+      justify-content: center;
+      font: 13px/18px $font-futura-demic;
+      text-transform: uppercase;
+      color: $color-white;
+    }
+  }
+}
+
+// piggy-bank
+.steps-bonus {
+  @include flex;
+  justify-content: center;
+
+  &__icon {
+    @include flex;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    margin-right: 25px;
+    background-color: $color-gold;
+    border-radius: 50%;
+  }
+
+  &__text {
+    font: 20px/25px $font-futura-demic;
+    color: $color-gold;
+    text-shadow: 0 3px 10px rgba(227, 184, 115, 0.15);
+  }
+}
+
+// media queries
+@media ($desktop-widths) {
+  .steps-wrapper {
+    @include flex;
+    align-items: flex-start;
+    right: 15px;
+  }
+
+  .left-side {
+    max-width: 38%;
+  }
+
+  .right-side {
+    max-width: 350px;
+  }
+
+}
+
+@media ($big-desktop-widths) {
+  .steps-wrapper {
+    right: 0;
+  }
+
+  .left-side {
+    max-width: 31%;
+    margin-right: 0;
+  }
+
+  .right-side {
+    max-width: 500px;
+  }
+
+  // steps-form
+  .steps-form {
+
+    &__item_button {
+      align-items: flex-end;
+
+      button {
+        padding: 16px 56px;
+      }
+    }
+  }
+
+}

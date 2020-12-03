@@ -1,0 +1,122 @@
+.footer-wrapper {
+  display: none;
+}
+
+// media queries
+@media ($tablet-widths) {
+  .footer-wrapper {
+    display: block;
+  }
+
+  .footer {
+    @include flex;
+    padding: 23px 18px;
+
+    // footer-logo
+    &__logo {
+
+      &-link {
+        font: 14px/16px $font-futura-demic;
+        text-transform: uppercase;
+        color: $color-gold;
+        transition: $base-transition;
+
+        &:hover {
+          color: #ffb030;
+        }
+      }
+    }
+
+    // navigation
+    &__navigation {
+      max-width: 50%;
+      width: 100%;
+
+      &-list {
+        @include flex;
+      }
+
+      &-link {
+        font-size: 12px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: $color-white;
+        transition: all 0.1s linear;
+
+        &_active,
+        &:hover {
+          color: $color-gold;
+        }
+      }
+    }
+
+    // footer-contact
+    &__contact {
+
+      &-link {
+        font: 12px/14px $font-futura-demic;
+        text-decoration: underline;
+        color: $color-gold;
+        transition: $base-transition;
+
+        &:hover {
+          color: #ffb030;
+        }
+      }
+
+      &-button {
+        display: none;
+        border: none;
+      }
+    }
+  }
+
+}
+
+@media ($desktop-widths) {
+  .footer {
+    padding: 21px 82px 20px 100px;
+
+    // navigation
+    &__navigation {
+      max-width: 40%;
+
+      &-link {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    // footer-contact
+    &__contact {
+      @include flex;
+      max-width: 28%;
+      width: 100%;
+
+      &-link {
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      &-button {
+        @include button;
+        font: 13px/15px $font-futura-demic;
+      }
+    }
+  }
+
+}
+
+@media ($big-desktop-widths) {
+  .footer {
+
+    // footer-contact
+    &__contact {
+
+      &-button {
+        padding: 13px 33px;
+      }
+    }
+  }
+
+}

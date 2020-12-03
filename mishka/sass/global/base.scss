@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,body {
+  font: $body-font;
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

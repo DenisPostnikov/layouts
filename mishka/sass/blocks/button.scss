@@ -1,0 +1,82 @@
+.button {
+  @include button;
+}
+
+.button--order {
+  margin: 0 auto;
+  font-size: 17px;
+}
+
+.button--write {
+  margin: 0 auto;
+}
+
+.button--write-us {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 81%;
+}
+
+.button--video {
+  width: 100%;
+  font-size: 17px;
+}
+
+.button--send-order {
+  @include button;
+  width: 100%;
+  font-size: 17px;
+  background: $body-bg;
+}
+
+@media ($tablet-widths) {
+
+  .button--order {
+    width: 290px;
+    padding-left: 3px;
+    font-size: 18px;
+  }
+
+  .button--write {
+    position: absolute;
+    top: 77px;
+    right: 0;
+    width: 175px;
+    padding-left: 4px;
+    font-size: 17px;
+  }
+
+  .button--write-us {
+    width:30%;
+    font-size: 17px;
+  }
+
+  .button--send-order {
+    order: -1;
+    width: 232px;
+    margin: 2px 0 0 49px;
+  }
+}
+
+@media ($desktop-widths) {
+
+  .button--order {
+    width: 292px;
+  }
+
+  .button--write {
+    top: 81px;
+    right: 0;
+  }
+
+  .button--write-us {
+    align-self: flex-start;
+    width: 20%;
+    margin: 21px 0 0 19.5%;
+  }
+
+  .button--send-order {
+    margin: 3px 0 0 19.5%;
+  }
+}

@@ -1,0 +1,132 @@
+.reviews__container {
+  position: relative;
+  width: $mobile-widths-rate;
+  margin: 0 auto;
+}
+
+.reviews__heading {
+  @include heading-property;
+  margin-bottom: 23px;
+}
+
+.reviews__description {
+  width: 99%;
+  margin-bottom: 24px;
+  line-height: 30px;
+}
+
+.reviews__author {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.reviews__author-name {
+  display: flex;
+  font-family: $body-font-family;
+  font-weight: bold;
+}
+
+.reviews__controls {
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 37px;
+  font-size: 0;
+  border: $border-line;
+}
+
+.reviews__controls-prev,
+.reviews__controls-next {
+  padding: 12px 41px 0px 38px;
+  transition: .3s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media ($tablet-widths) {
+
+  .reviews {
+    background: url('../img/review@1x.jpg') top left no-repeat;
+    background-size: 350px 457px;
+  }
+
+  .reviews__container {
+    width: $tablet-widths-rate;
+    padding: 75px 0 50px;
+  }
+
+  .reviews__heading {
+    @include heading-mid;
+  }
+
+  .reviews__description {
+    width: 97%;
+    margin: 48px 0 56px;
+    font-size: 17px;
+  }
+
+  .reviews__author {
+    font-size: 17px;
+  }
+
+  .reviews__controls {
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 4%;
+    right: 0;
+    width: 25.3%;
+    border: none
+  }
+
+  .reviews__controls-prev {
+    padding-left: 12px;
+    padding-right: 20px;
+  }
+
+  .reviews__controls-next {
+    padding-left: 16px;
+    padding-right: 20px;
+  }
+}
+
+@media ($desktop-widths) {
+
+  .reviews {
+    background: none;
+  }
+
+  .reviews__container {
+    width: 91.5%;
+    margin: 0 auto;
+    padding: 70px 0 92px 15%;
+    background: url('../img/review@1x.jpg') top left no-repeat;
+    background-size: 350px 457px;
+  }
+
+  .reviews__heading {
+    @include heading-big;
+  }
+
+  .reviews__description {
+    width: 90%;
+    margin: 48px 0 37px 4px;
+  }
+
+  .reviews__author {
+    margin-left: 3px;
+  }
+
+  .reviews__controls {
+    bottom: 13%;
+  }
+
+  .reviews__controls-prev {
+    padding-left: 107px;
+  }
+}

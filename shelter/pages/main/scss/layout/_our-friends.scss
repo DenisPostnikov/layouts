@@ -1,0 +1,30 @@
+.our-friends {
+    padding: 5rem 0 6.25rem;
+    background-color: #f6f6f6;
+
+    @media (max-width: $tablet-width) {
+        padding: 2.7rem 0 2.65rem;
+    }
+
+    &__heading {
+        margin-bottom: 3.8rem;
+        font: $font-full-georgia;
+        line-height: 123%;
+        letter-spacing: 0.03em;
+        text-align: center;
+        color: $color-dark-gray;
+
+        @media (max-width: $tablet-width) {
+            margin-bottom: 2.6rem;
+            font-size: 1.67rem;
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        @include button();
+        display: flex;
+        max-width: 260px;
+        margin: 0 auto;
+    }
+}

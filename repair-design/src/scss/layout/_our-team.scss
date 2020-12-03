@@ -1,0 +1,176 @@
+.our-team {
+  padding: 195px 18px 50px;
+  text-align: center;
+  background-color: #000;
+
+  //  heading
+  &__heading {
+    margin-bottom: 13px;
+    font: 22px/138% $font-yeseva-one;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__img {
+    position: relative;
+    display: inline-flex;
+    margin-bottom: 23px;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      width: 32px;
+      height: 1px;
+      background-color: #e3b873;
+    }
+
+    &:before {
+      left: 40px;
+    }
+
+    &:after {
+      right: 40px;
+    }
+  }
+
+  &__icon {
+    fill: $color-gold;
+  }
+
+  &__desc {
+    margin-bottom: 70px;
+    font-size: 15px;
+    line-height: 136%;
+    color: #fff;
+  }
+}
+
+// member-list
+.members-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.member-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 89px;
+  }
+
+  &__icon-member {
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    @include flex;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: $color-gold;
+
+    svg {
+      fill: $bg-light;
+    }
+  }
+
+  &__img {
+    width: 303px;
+    height: 404px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  &__info {
+    width: 233px;
+    margin: -80px auto 0;
+    padding: 16px 23px 22px;
+    background-color: $bg-light;
+  }
+
+  &__heading {
+    margin-bottom: 9px;
+    font: 18px/25px $font-yeseva-one;
+    color: #181818;
+  }
+
+  &__position {
+    font-size: 18px;
+    line-height: 26px;
+    color: #959595;
+  }
+
+  &__experience {
+    width: 233px;
+    margin: 0 auto;
+    padding: 13px 21px 14px;
+    font: 13px/20px $font-yeseva-one;
+    text-transform: uppercase;
+    background-color: $color-gold;
+    color: $color-white;
+  }
+}
+
+// media queries
+@media (min-width: 400px) {
+  // member-list
+  .members-list {
+    align-items: center;
+  }
+
+}
+
+@media ($tablet-widths) {
+  .our-team {
+    padding: 240px 5% 50px;
+    background-color: $bg-light;
+
+    //  heading
+    &__heading {
+      font-size: 20px;
+      line-height: 28px;
+      color: #181818;
+    }
+
+    &__desc {
+      margin-bottom: 90px;
+      font-size: 20px;
+      line-height: 27px;
+      color: #181818;
+    }
+  }
+
+}
+
+@media ($desktop-widths) {
+  // member-list
+  .members-list {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+}
+
+
+@media ($big-desktop-widths) {
+  .our-team {
+    padding: 240px 11% 50px;
+  }
+
+}
+
+
+@media (min-width: 1550px) {
+  .our-team {
+    padding: 240px 17% 50px;
+  }
+
+}
